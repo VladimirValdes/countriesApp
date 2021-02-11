@@ -6,7 +6,8 @@
     background-color: var(--elements-primary-color);
     box-shadow: 0 5px 8px -6px var(--shadow-primary-color);
     padding: 0 1rem;
-    // transition: .3s ease all;
+    transition: color 0.3s, background 0.3s;
+
 
 
     display: flex;
@@ -28,6 +29,7 @@
 	    cursor: pointer;
 	    display: flex;
         outline: none;
+        
         
         &::after {
             content: "";

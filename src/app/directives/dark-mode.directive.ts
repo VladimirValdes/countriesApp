@@ -43,11 +43,9 @@ export class DarkModeDirective {
   private guardarStorage(): void {
 
     if ( JSON.parse( localStorage.getItem('darkMode'))) {
-      this.render.addClass(document.body, 'animate-colors-transition');
       this.render.removeClass(document.body, 'theme-light');
       this.render.addClass(document.body, 'theme-dark');
     } else {
-      this.render.addClass(document.body, 'animate-colors-transition');
       this.render.removeClass(document.body, 'theme-dark');
       this.render.addClass(document.body, 'theme-light');
     }
