@@ -1,0 +1,15 @@
+<div class="cards-content" >
+    <div class="card" 
+        *ngFor="let country of countries"
+        (click)="goDetail( country.alpha3Code )"
+        >
+        <img [src]="country.flag" alt="bandera" class="card__img">
+        <div class="card__info">
+            <p class="name-country">{{ country.name }}</p>
+            <p class="key-country">Population: <span class="value-country">{{ country.population }}</span></p>
+            <p class="key-country">Region:  <span class="value-country"> {{ country.region }}</span></p>
+            <p class="key-country">Capital: <span class="value-country">{{ country.capital }}</span></p>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,134 @@
+@import 'base/typography';
+
+.back__btn {
+    margin: 2rem 0 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    border: none;
+    background-color: var(--elements-primary-color);
+    padding: 14px;
+    box-shadow: 0px 0px 5px var(--shadow-primary-color);
+    border-radius: 3px;
+    font-size: $text-detail;
+    font-weight: $font-ws;
+    color: var(--text-primary-color);
+    // transition: .3s ease all;
+
+    cursor: pointer;
+
+        .icon{
+            font-size: 20px;
+            margin-right: 0.5rem;
+            color: var(--text-primary-color);
+        }
+}
+
+
+
+
+.border__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 125px;
+    border: none;
+    background-color: var(--elements-primary-color);
+    padding: 5px;
+    box-shadow: 0px 0px 5px var(--shadow-primary-color);
+    border-radius: 3px;
+    font-size: $text-detail;
+    font-weight: $font-ws;
+    color: var(--text-primary-color);
+    margin: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    // transition: .3s ease all;
+
+
+}
+
+.country {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+    // transition: .3s ease all;
+
+
+    &__flag{
+        flex: 1 1 375px;
+        height: 425px;
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        
+
+        .flag {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: 50% 50%;
+            border: 10px solid transparent;
+            box-shadow: 0px 0px 2px var(--shadow-primary-color);
+            
+        }
+    }
+
+    &__info {
+
+        flex: 1 1 375px;
+        margin-top: 2rem;
+        padding: 2.5rem 1.5rem 0 1.5rem;
+
+
+        .main-info {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &__principal {
+                margin:  1rem 1rem 0 0;
+            }
+        }
+
+        .sub-info {
+            margin-top: 2rem;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+
+            .bordes-country {
+                display: flex;
+                flex-flow: row wrap;
+            }
+        }
+
+        
+     
+    }
+    .name-country {
+        font-weight: $font-wb;
+    }
+
+    .key-country {
+        font-size: $text-detail;
+        font-weight: $font-wm;
+
+        &--w {
+            font-weight: $font-wb;
+            margin: 0 0.5rem 0.5rem 0;
+        }
+    }
+
+    .value-country {
+        font-size: $text-detail;
+        font-weight: $font-ws;
+    }
+
+}
+
+

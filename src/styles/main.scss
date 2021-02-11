@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/typography';
+
+
+body {
+    background-color: var(--background-primary-color);
+    color: var(--text-primary-color);
+    font-family: $font;
+    font-size: $text-items;
+}
+
+.animate-colors-transition {
+    transition: color 0.5s, background 0.5s;
+}

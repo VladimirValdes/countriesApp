@@ -1,0 +1,10 @@
+<header class="header">
+    <p class="header__text"> Where in the world?</p>
+    <button class="header__switch "
+            appDarkMode
+            (clickActive)="clickSwitch = $event"
+            [ngClass]="{'active': clickSwitch }">
+        <span class="header__switch_icon"><i class="fas fa-sun"></i></span>
+        <span class="header__switch_icon"><i class="fas fa-moon"></i></span>
+    </button>
+</header>

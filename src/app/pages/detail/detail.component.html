@@ -1,0 +1,73 @@
+<main>
+    <button class="back__btn" 
+            (click)="backHome()"
+            *ngIf="!loading"
+            >
+        <i class="fas fa-long-arrow-alt-left icon"></i>
+        Back
+      </button>
+
+      <section class="country" 
+              *ngIf="!loading"
+            >
+
+        <div class="country__flag">
+          <img [src]="country.flag" alt="" class="flag">
+        </div>
+
+        <div class="country__info">
+          <h1 class="name-country"> {{ country.name }}</h1>
+
+          <div class="main-info">
+
+            <div class="main-info__principal">
+
+              <p class="key-country">Population: <span class="value-country">{{ country.population }}</span></p>
+              <p class="key-country">Region:  <span class="value-country">{{ country.region }}</span></p>
+              <p class="key-country">Sub Region: <span class="value-country">{{ country.subregion }}</span></p>
+              <p class="key-country">Capital: <span class="value-country">{{ country.capital }}</span></p>
+
+            </div>
+
+            <div class="main-info__secondary">
+
+              <p class="key-country">Top Level Domain: 
+                <span class="value-country"
+                      *ngFor="let domain of country.topLevelDomain">{{ domain }}</span>
+              </p>
+              <p class="key-country">Currencies: 
+                <span class="value-country"
+                      *ngFor="let currency of country.currencies; let i = index">
+                      {{ currency.name | commas: (i+1) : country.currencies.length }}
+                    </span>
+              </p>
+              <p class="key-country">Languages: 
+                <span class="value-country"
+                      *ngFor="let lan of country.languages; let i = index">
+                    {{ lan.name  | commas: (i+1) : country.languages.length }}
+                </span>
+              </p>
+
+
+            </div>
+
+          </div>
+
+          <div class="sub-info">
+            <p class="key-country key-country--w">Borders Countries:</p>
+            <div class="bordes-country">
+              <button class="border__btn" 
+                      *ngFor="let border of country.borders"
+                      (click)="getBorder(border)"
+              >
+                  {{ border | completeName}}
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <app-loading *ngIf="loading"></app-loading>
+</main>
